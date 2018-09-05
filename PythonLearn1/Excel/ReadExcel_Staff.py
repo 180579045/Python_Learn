@@ -5,7 +5,7 @@ from xlutils.copy import copy
 
 book = xlrd.open_workbook('Datafile/EQ_Staff.xlsx')           # 打开一个excel
 sheet2 = book.sheet_by_index(0)                               # 把所有要替换的内容放到第一个Sheet中
-sheet = book.sheet_by_name('staff')                           # 根据sheet页名字获取sheet
+sheet = book.sheet_by_index(1)                                # 根据sheet页名字获取sheet
 
 
 StaffInfo = {"":""}                                           # 工号字典
@@ -20,6 +20,7 @@ writecp = copy(book)                                          # 利用copy函数
 ws = writecp.get_sheet(0)
 
 for i in range(sheet2.nrows):
+    # print(sheet2.row_values(i)[0])
     if str(sheet2.row_values(i)[0]) in StaffInfo:
         ret = StaffInfo[str(sheet2.row_values(i)[0])]
         ws.write(i, 0, str(ret))
