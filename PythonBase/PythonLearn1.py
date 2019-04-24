@@ -49,7 +49,7 @@ print('atuple的第二个参数是：'+atuple[1])
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-# 使用迭代器
+# --------------------------------------------------使用迭代器
 for iter in alist:
     a = a + 1
     print('第' + str(a) + '个参数是：' + str(iter))
@@ -58,11 +58,13 @@ for iter in alist:
 
 
 # ----------------Python函数的参数--------------------------
+
 # 可变参数，即一个星号代表参数只是一维的（参数接收的是一个tuple）
 def functuple(name, age, *args):
     print('name:', name, 'age:', age, 'ohter:', args)
 # 以下是可变参数的调用
 functuple('A', 10, 'beijing', 'aass')
+
 
 # 关键字参数（参数接收的是一个dict）
 # 可以将参数设置为可变长度的，且可以传入字典中的关键字
@@ -72,11 +74,13 @@ def funckeyword(name, age, **kw):
     if ('city' in kw) :
         print(kw['city'])
 
+
 # 以下是关键字参数的调用
 other = {'city':'beijing','job':'chengxuyuan'}
 # 参数会自动转变为字典的关键字
 funckeyword('C', 20, city = 'shanghai', job = 'z')
 funckeyword('D', 10, job = other['job'])
+
 # ----------------------------------------------------------
 
 
@@ -106,6 +110,7 @@ print('使用切片：' + str(BeSlicedList[2 : 4]))
 
 
 # ----------------迭代表达式，列表生成式--------------------
+
 CreateAList = []
 for i in range(1,10):
     CreateAList.append('List' + str(i))
@@ -115,6 +120,8 @@ print('先初始化一个列表：' + str(CreateAList))
 # ---列表生成式
 lowerList = [s.lower() for s in CreateAList]
 print('直接使用列表生成式，将列表转为小写：' + str(lowerList))
+
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # ---列表生成器（Generator）
@@ -203,8 +210,8 @@ callbackfunc(-10, Callbackabs)
 
 # ----------------------map函数-----------------------------
 # map函数接收两个参数，一个是函数，另一个是一个容器
-# map函数的入参函数只接受一个参数，所以map函数是作用在容器的每一个元素
-# mao是将容器中的每一个元素都所用在入参的第一个函数当中
+# map函数的入参函数只接受一个参数，所以map函数作用在容器的每一个元素
+# map是将容器中的每一个元素都所用在入参的第一个函数当中
 AMapList = [1, 2, 3, 4, 5, 6]
 
 
