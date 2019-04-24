@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+###################
+# Python的常用库函数、常用容器的使用
+###################
+
 import os
 from functools import reduce
 
@@ -43,7 +47,7 @@ print(alist)
 #       |        guoliang    |
 #       |    func(x,y,z)     |
 #       |  1    3     5      |
-#        ---------------------
+#       ----------------------
 
 atuple = (1, 'aaa', 3, 4)
 print('atuple的第二个参数是：'+atuple[1])
