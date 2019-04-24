@@ -10,7 +10,7 @@ print('This is a base print!,Start to learn python basic grammar!')
 # ---------------Python的一些基础容器和字典------------------
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# list：一个容器，和vector类似
+# list：一个容器，和C++ STL中的vector类似
 # 可以向里边加入任何元素，且不必担心vector那样必须是同一个数据类型
 #
 #     没有盖子↓↓↓↓↓  可随时任意的添加元素
@@ -28,7 +28,7 @@ alist.insert(1, 'string')
 alist.insert(2, [11, 13, 17])
 print('alist is')
 print(alist)
-a = 0
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
@@ -44,11 +44,12 @@ a = 0
 #       |    func(x,y,z)     |
 #       |  1    3     5      |
 #        ---------------------
+
 atuple = (1, 'aaa', 3, 4)
 print('atuple的第二个参数是：'+atuple[1])
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-
+a = 0
 # --------------------------------------------------使用迭代器
 for iter in alist:
     a = a + 1
